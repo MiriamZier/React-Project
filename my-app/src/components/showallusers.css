@@ -1,0 +1,10 @@
+#alldt{
+    margin-top: -30%; 
+    margin-left: 15%;
+   margin-right: 20%; 
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-evenly;
+   background-color: aquamarine;
+   /* margin-bottom: -10%; */
+}

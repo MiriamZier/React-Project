@@ -1,0 +1,18 @@
+.divv{
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px; 
+     margin-left: 10%;
+     font-size: large;
+     background-color: rgb(255, 244, 227);
+}
+p{
+ margin-right: 20%;
+ font-size: xx-large;
+ color: brown;
+
+}
