@@ -5,6 +5,12 @@ import { useDispatch } from "react-redux"
 import { AddUserList, show_all_u } from "../redux/actn"
 // import { useDispatch } from "react-redux"
 
+
+// d - פונקציית Dispatch לשליחת פעולות ל-redux.
+// setlist - פונקציה מהקונטקסט לניהול רשימת המשתמשים.
+// add - פונקציה מהקונטקסט להוספת משתמש לרשימה.
+// addu - פונקציה אסינכרונית שמבצעת
+//  בקשה להוספת משתמש חדש ומעדכנת את המצב הגלובלי.
 export const Myregister=()=>{
 let d=useDispatch()
     const setlist=useContext(Persson).sellist
@@ -19,6 +25,17 @@ let d=useDispatch()
            d(show_all_u( res.data))
        
     }
+//     הקוד מחזיר רכיב <div> עם מחלקת CSS "container" ומרווח למעלה (mt-3).
+// <input> הראשון לוקח את תעודת הזהות של המשתמש ומעדכן את המצב המקומי.
+// <input> השני לוקח את שם המשתמש ומעדכן את המצב המקומי.
+// <input> השלישי לוקח את הכתובת של המשתמש ומעדכן את המצב המקומי.
+// <input> הרביעי לוקח את הסיסמה של המשתמש ומעדכן את המצב המקומי.
+// <input> החמישי לוקח את מספר הטלפון של המשתמש ומעדכן את המצב המקומי.
+// כפתור <button> מפעיל את הפונקציה addu 
+// כאשר לוחצים עליו, שמבצעת את בקשת ההוספה ומעדכנת את המצב הגלובלי.
+// תיקון ושיפור הקוד
+// שימוש ב-state במקום document.getElementById.
+// הוספת ה-user החדש ישירות במצב המקומי במקום קריאה חוזרת ל-addUser.
     const add=useContext(Persson).add
   
         return <div className="container mt-3">

@@ -6,12 +6,19 @@ require('./showall.css')
 export const ShowAll=()=>{
     
     const param=useParams()
+
+    // המשתנה r מחזיק את פרטי המתכון, והפונקציה setre מעדכנת את המצב.
     const [r,setre]=useState({ingredients:[]})
+    // הפונקציה load נטענת פעם אחת כאשר הקומפוננטה נטענת או כאשר מזהה המתכון
+    //  משתנה. היא מבצעת בקשת HTTP לשרת ומעדכנת את המצב עם הנתונים שהתקבלו.
     useEffect(()=>{
         async function load(){
             const res=await getbyidr(param.id)
             setre(res.data)
         }load()
+        // רכיב <div> ראשי שמכיל שני חלקים:
+    {/* <div className="div1"> - מציג את שם המתכון, תמונה ופרטים נוספים על המתכון (רמה, זמן הכנה, סוג).
+    <div className="div2" id="amntt"> - מציג את רשימת המצרכים. עבור כל מצרך מוצג כמות ושם המצרך. */}
     })
     return <div>
         <div className="div1"> 
